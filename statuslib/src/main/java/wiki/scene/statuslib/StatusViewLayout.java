@@ -16,9 +16,9 @@ public class StatusViewLayout extends RelativeLayout {
   private static final int defStyleAttr = R.attr.progressLayoutDefStyle;
   private static final int NOT_SET = -1;
 
-  private static final String LOADING_TAG = "ProgressLayout.loading_tag";
-  private static final String NONE_TAG = "ProgressLayout.none_tag";
-  private static final String ERROR_TAG = "ProgressLayout.error_tag";
+  private static final String LOADING_TAG = "StatusViewLayout.loading_tag";
+  private static final String NONE_TAG = "StatusViewLayout.none_tag";
+  private static final String ERROR_TAG = "StatusViewLayout.error_tag";
 
   private LayoutInflater layoutInflater;
 
@@ -82,7 +82,7 @@ public class StatusViewLayout extends RelativeLayout {
     this.layoutInflater =
       (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     TypedArray typedArray =
-      context.obtainStyledAttributes(attrs, R.styleable.ProgressLayout, defStyleAttr,
+      context.obtainStyledAttributes(attrs, R.styleable.StatusViewLayout, defStyleAttr,
         R.style.DefaultSmartStyle);
 
     if (typedArray == null) {
@@ -91,13 +91,13 @@ public class StatusViewLayout extends RelativeLayout {
 
     try {
       this.loadingId =
-        typedArray.getResourceId(R.styleable.ProgressLayout_loading_layout, NOT_SET);
+        typedArray.getResourceId(R.styleable.StatusViewLayout_loading_layout, NOT_SET);
       this.noneId =
-        typedArray.getResourceId(R.styleable.ProgressLayout_none_content, NOT_SET);
+        typedArray.getResourceId(R.styleable.StatusViewLayout_none_content, NOT_SET);
       this.networkErrorId =
-        typedArray.getResourceId(R.styleable.ProgressLayout_network_content, NOT_SET);
+        typedArray.getResourceId(R.styleable.StatusViewLayout_network_content, NOT_SET);
       this.failedId =
-        typedArray.getResourceId(R.styleable.ProgressLayout_failed_content, NOT_SET);
+        typedArray.getResourceId(R.styleable.StatusViewLayout_failed_content, NOT_SET);
     } finally {
       typedArray.recycle();
     }
