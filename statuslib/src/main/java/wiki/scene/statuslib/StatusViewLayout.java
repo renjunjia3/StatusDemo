@@ -222,6 +222,8 @@ public class StatusViewLayout extends RelativeLayout {
 
   /**
    * 显示无内容界面
+   * 如果不想用按钮的话，就在对应的状态展示时
+   * 直接不用里面的findViewById设置点击事件
    *
    * @param retryListener 点击事件回调
    */
@@ -253,6 +255,8 @@ public class StatusViewLayout extends RelativeLayout {
 
   /**
    * 显示网络错误界面
+   * 如果不想用按钮的话，就在对应的状态展示时
+   * 直接不用里面的findViewById设置点击事件
    *
    * @param retryListener 点击事件回调
    */
@@ -285,6 +289,8 @@ public class StatusViewLayout extends RelativeLayout {
 
   /**
    * 显示加载失败界面
+   * 如果不想用按钮的话，就在对应的状态展示时
+   * 直接不用里面的findViewById设置点击事件
    *
    * @param retryListener 点击事件回调
    */
